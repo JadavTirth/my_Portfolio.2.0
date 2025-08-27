@@ -7,8 +7,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // required for static export if using next/image
   },
-}
+  output: 'export', // 👈 tells Next.js to generate /out for static hosting
+};
 
-export default nextConfig
+export default nextConfig;
