@@ -13,12 +13,29 @@ export const metadata: Metadata = {
     "DevOps Engineer passionate about automating workflows and optimizing infrastructure. Specializing in Docker, AWS, GitLab CI/CD, and Ansible.",
   keywords: ["DevOps", "Engineer", "Docker", "AWS", "GitLab", "Ansible", "CI/CD", "Infrastructure"],
   authors: [{ name: "Tirth A. Jadav" }],
-  openGraph: {
-    title: "Tirth A. Jadav | DevOps Engineer",
-    description: "DevOps Engineer passionate about automating workflows and optimizing infrastructure.",
-    type: "website",
+  generator: "v0.app",
+
+  // 👇 Add favicon
+  icons: {
+    icon: "/tj-logo-circular-design.png", // or "/tj-logo.png"
+    shortcut: "/tj-logo.png",
   },
-    generator: 'v0.app'
+
+  // 👇 Add OpenGraph + Twitter preview image
+  // openGraph: {
+  //   title: "Tirth A. Jadav | DevOps Engineer",
+  //   description:
+  //     "DevOps Engineer passionate about automating workflows and optimizing infrastructure.",
+  //   type: "website",
+  //   images: ["/profile-5.JPG"], // your image in public/
+  // },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: "Tirth A. Jadav | DevOps Engineer",
+  //   description:
+  //     "DevOps Engineer passionate about automating workflows and optimizing infrastructure.",
+  //   images: ["/profile-5.JPG"],
+  // },
 }
 
 export default function RootLayout({

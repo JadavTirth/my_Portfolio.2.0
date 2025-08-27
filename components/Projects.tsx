@@ -11,12 +11,19 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "🌩️ Terraform Remote State Backup",
+      description:
+        "Implemented remote state management by storing the terraform.tfstate file in an S3 bucket with DynamoDB for state locking, ensuring secure and consistent infrastructure deployments.",
+      technologies: ["Terraform", "AWS", "S3", "DynamoDB", "Remote State"],
+      github: "https://github.com/JadavTirth/terraform_CreateFile_in_s3",
+    },
+    {
       title: "Notes App",
       description:
         "Deployed full-stack Notes application on AWS EC2 using Docker, MySQL, and Nginx with Docker Compose.",
       technologies: ["Docker", "Docker Compose", "MySQL", "Nginx", "AWS EC2"],
-      dockerhub:
-        "https://hub.docker.com/repository/docker/YOUR_USERNAME/notes-app",
+      github:
+        "https://github.com/JadavTirth/Note_App_Docker",
     },
     {
       title: "Import-Export Website",
@@ -25,20 +32,6 @@ export default function Projects() {
       technologies: ["React", "Node.js", "HTML", "CSS", "JavaScript"],
       github: "https://github.com/JadavTirth/import-export",
       live: "http://www.argoimex.com",
-    },
-    {
-      title: "🌩️ Terraform Remote State Backup",
-      description:
-        "Implemented remote state management by storing the terraform.tfstate file in an S3 bucket with DynamoDB for state locking, ensuring secure and consistent infrastructure deployments.",
-      technologies: [
-        "Terraform",
-        "AWS",
-        "S3",
-        "DynamoDB",
-        "Remote State",
-      ],
-      github: "https://github.com/JadavTirth/terraform_CreateFile_in_s3",
-      
     },
   ];
 
@@ -66,7 +59,10 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 bg-muted/30 relative overflow-hidden"
+    >
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"
         animate={{
@@ -198,7 +194,10 @@ export default function Projects() {
                         }}
                         transition={{ type: "spring", stiffness: 400 }}
                       >
-                        <Badge variant="outline" className="hover:bg-primary/10">
+                        <Badge
+                          variant="outline"
+                          className="hover:bg-primary/10"
+                        >
                           {tech}
                         </Badge>
                       </motion.div>
@@ -211,23 +210,7 @@ export default function Projects() {
                     }}
                     transition={{ duration: 0.3 }}
                   >
-                    {project.dockerhub && (
-                      <motion.div
-                        whileHover={{ scale: 1.05, rotateX: 10 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          asChild
-                          className="hover:bg-primary/10 bg-transparent"
-                        >
-                          <a href={project.dockerhub} target="_blank" rel="noopener noreferrer">
-                            🐳 Docker Hub
-                          </a>
-                        </Button>
-                      </motion.div>
-                    )}
+                    
                     {project.github && (
                       <motion.div
                         whileHover={{ scale: 1.05, rotateX: 10 }}
@@ -239,7 +222,11 @@ export default function Projects() {
                           asChild
                           className="hover:bg-primary/10 bg-transparent"
                         >
-                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Github className="h-4 w-4 mr-2" />
                             GitHub
                           </a>
@@ -257,7 +244,11 @@ export default function Projects() {
                           asChild
                           className="hover:bg-primary/10 bg-transparent"
                         >
-                          <a href={project.live} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <ExternalLink className="h-4 w-4 mr-2" />
                             Live Demo
                           </a>
