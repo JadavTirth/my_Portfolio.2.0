@@ -79,9 +79,10 @@ export default function About() {
                 />
                 <div className="w-48 h-48 relative">
                   <Image
-                    src="/profile-5.jpg"
+                    src="/me.jpg"
                     alt="Tirth A. Jadav"
                     fill
+                    priority
                     className="object-cover rounded-full border-4 border-primary/20"
                   />
                 </div>
